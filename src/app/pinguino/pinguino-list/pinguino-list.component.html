@@ -1,0 +1,33 @@
+<div *ngIf="selected">
+  <app-pinguino-detail [pinguino] = "selectedPinguino"></app-pinguino-detail>
+ </div>
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Nombre cientifico</th>
+      <th scope="col">Alimentacion</th>
+      <th scope="col">Distribucion mundial</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pinguino of pinguinos" (click)="onSelected(pinguino)">
+      <td (click)="onSelected(pinguino)">
+        <dd class="id">{{pinguino.id}}</dd>
+      </td >
+      <td (click)="onSelected(pinguino)">
+        <dd class="name">{{pinguino.name}}</dd>
+      </td>
+      <td (click)="onSelected(pinguino)">
+        <dd class="scientificName">{{pinguino.scientificName}}</dd>
+      </td>
+      <td (click)="onSelected(pinguino)">
+        <dd class="feeding">{{pinguino.feeding}}</dd>
+      </td>
+      <td (click)="onSelected(pinguino)">
+        <dd class="globalDistribution">{{pinguino.globalDistribution}}</dd>
+      </td>
+    </tr>
+</table>
